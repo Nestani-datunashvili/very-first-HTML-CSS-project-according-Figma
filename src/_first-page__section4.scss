@@ -1,0 +1,66 @@
+@import "./mixin";
+@import "./variable";
+
+.forth-section {
+  height: fit-content;
+  padding: 0 110px;
+
+  h3 {
+    margin-left: 106px;
+    margin: 96px 0 32px 100px;
+  }
+
+  &__content {
+    width: 700px;
+    height: 174px;
+    margin-left: 119px;
+  }
+
+  .card-container {
+    margin-top: 65px;
+    @include flex-center;
+    gap: 30px;
+
+    .card {
+      width: 410px;
+      height: 421px;
+      border-radius: 20px;
+      padding: 80px 48px 40px 48px;
+      @include flex-column;
+      transition: transform 0.3s ease;
+      align-items: center;
+
+      &__content {
+        width: 315px;
+        height: 293px;
+        @include flex-column;
+        justify-content: space-between;
+
+        h4 {
+          font-weight: 700;
+          font-size: 28px;
+          color: $white;
+        }
+
+        p {
+          color: $white;
+        }
+
+        button {
+          width: 146px;
+          height: 51px;
+        }
+      }
+    }
+
+    .box1 {
+      background-image: url("../img/backblack.png"), url("../img/card1.png");
+    }
+    .box2 {
+      background-image: url("../img/backblack.png"), url("../img/card2.png");
+    }
+    .box3 {
+      background-image: url("../img/backblack.png"), url("../img/card3.png");
+    }
+  }
+}

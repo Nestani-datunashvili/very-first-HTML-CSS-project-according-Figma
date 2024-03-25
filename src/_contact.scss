@@ -1,0 +1,53 @@
+@import "./mixin";
+@import "./variable";
+
+.contact-section {
+  height: 580px;
+  background-color: $yellow-light;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    @include flex-column;
+    gap: 20px;
+    padding-left: 206px;
+
+    h3 {
+      letter-spacing: 2px;
+      size: 16px;
+      line-height: 19px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &--inline {
+      position: relative;
+      margin-bottom: 20px;
+
+      span {
+        margin-left: 30px;
+      }
+    }
+
+    &--inline::after {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 1px;
+      background-color: $border;
+      top: 50px;
+      left: 0;
+    }
+  }
+}
+
+.map {
+  max-width: 1600px;
+  height: 440px;
+  iframe {
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+@import "./mixin";
+@import "./variable";
+
+.fifth-section {
+  &__title {
+    margin: 118px 0 50px 100px;
+    position: relative;
+  }
+
+  &__title:after {
+    content: "";
+    width: 1000px;
+    height: 1px;
+    background-color: $border;
+    position: absolute;
+    top: 30px;
+    right: 90px;
+  }
+
+  &__events {
+    display: flex;
+    margin: 50px 100px 100px 100px;
+    gap: 24px;
+
+    .event-card {
+      width: 628px;
+      height: 191px;
+      background-color: $yellow;
+      border-radius: 20px;
+      display: flex;
+      gap: 24px;
+      padding: 32px 128px 40px 40px;
+
+      .date {
+        ul {
+          list-style: none;
+          color: $primary-color;
+
+          .day {
+            font-size: 48px;
+          }
+
+          .month {
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      &__content {
+        h3 {
+          letter-spacing: 2px;
+          font-weight: 500;
+          position: relative;
+          margin-bottom: 30px;
+        }
+
+        h3::after {
+          letter-spacing: 2px;
+          font-weight: 500;
+          position: absolute;
+          content: "";
+          width: 45px;
+          height: 2px;
+          background-color: $primary-color;
+          position: absolute;
+          top: 10px;
+          left: 120px;
+        }
+
+        h4 {
+          font-size: 28px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .banner-section {
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 470px;
+    margin-bottom: 100px;
+    @include flex-center;
+
+    &__content {
+      @include flex-center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 50px;
+      height: 470px;
+
+      h2 {
+        text-align: center;
+        color: $white;
+        width: 950px;
+      }
+
+      &__button {
+        display: flex;
+        gap: 50px;
+      }
+    }
+  }
+}

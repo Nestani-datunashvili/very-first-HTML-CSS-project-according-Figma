@@ -1,0 +1,64 @@
+@import "./mixin";
+@import "./variable";
+
+footer {
+  height: fit-content;
+  background-color: $black;
+  display: flex;
+  padding: 80px 0;
+  justify-content: space-evenly;
+
+  .footer {
+    display: flex;
+    gap: 50px;
+
+    img {
+      width: 125px;
+      height: 45px;
+    }
+
+    &__nav {
+      li {
+        margin-bottom: 40px;
+        margin-left: 20px;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+
+    &_title {
+      width: 550px;
+      @include flex-column;
+      gap: 40px;
+
+      h2 {
+        font-size: 40px;
+        color: $white;
+      }
+
+      .email {
+        display: flex;
+
+        input {
+          width: 450px;
+          height: 51px;
+          border: 1px solid #ebf0f94d;
+          background-color: $black;
+          color: #ebf0f94d;
+        }
+
+        input::placeholder {
+          color: #ebf0f94d;
+          padding: 10px;
+          font-weight: 400;
+          line-height: 19px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

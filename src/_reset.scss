@@ -1,0 +1,62 @@
+@import "./variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+section,
+footer,
+header {
+  max-width: 1500px;
+}
+
+h3 {
+  color: $primary-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  color: $primary-color;
+}
+
+p {
+  color: $secondary-color;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav-button {
+  @include navbar-button;
+  transition: transform 0.3s ease;
+}
+
+.secondary-button {
+  @include secondary-button;
+  transition: background-color 0.3s ease;
+  a {
+    @include anchor;
+    color: $black;
+  }
+}
+
+.primary-button {
+  @include primary-button;
+  transition: background-color 0.3s ease;
+
+  a {
+    @include anchor;
+    color: $black;
+  }
+}

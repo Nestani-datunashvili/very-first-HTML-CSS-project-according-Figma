@@ -1,0 +1,35 @@
+@import "./mixin";
+@import "./variable";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 110px;
+  align-items: center;
+  height: 87px;
+
+  .logo {
+    width: 125px;
+    height: 44px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 40px;
+
+    &__item {
+      list-style: none;
+      transition: transform 0.2s ease;
+
+      &__link {
+        @include anchor;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+    cursor: pointer;
+  }
+}

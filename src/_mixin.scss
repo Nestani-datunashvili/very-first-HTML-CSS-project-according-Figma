@@ -1,0 +1,48 @@
+@import "./variable";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin anchor {
+  text-decoration: none;
+}
+
+@mixin primary-button {
+  height: 51px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: $md;
+  border: none;
+  background-color: $yellow;
+  color: $black;
+  cursor: pointer;
+}
+
+@mixin secondary-button {
+  height: 51px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: $md;
+  border: none;
+  background-color: $white;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+@mixin navbar-button {
+  height: 43px;
+  background-color: $primary-color;
+  color: $white;
+  padding: 12px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
